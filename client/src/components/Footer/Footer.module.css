@@ -1,0 +1,19 @@
+footer {
+  padding: clamp(1rem, 2vw, 2rem);
+  text-align: center;
+  margin-top: auto;
+}
+
+.inform {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  padding-top: clamp(1rem, 2vw, 2rem);
+  border-top: 1px solid #007BB8;
+}
+
+.inform p {
+  color: #034B70;
+  font-family: 'Mulish';
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}

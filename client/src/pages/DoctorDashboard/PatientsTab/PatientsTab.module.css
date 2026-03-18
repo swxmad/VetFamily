@@ -1,0 +1,118 @@
+/* PATIENTS TAB */
+.patientsTab {
+  max-width: clamp(320px, 95vw, 1200px);
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  color: #034B70;
+  font-family: 'Mulish';
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ADD BUTTON */
+.addButton {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: 'Mulish';
+  font-size: clamp(1.6rem, 3vw, 2rem);
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+}
+
+.addButton:hover {
+  transform: translateY(-2px);
+  background-color: rgba(0, 123, 184, 0.1);
+}
+
+/* STATUS TABS */
+.statusTabs {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+  padding-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.statusTab {
+  background: transparent;
+  border: none;
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: clamp(110px, 20vw, 140px);
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1rem);
+  text-align: center;
+  font-family: 'Mulish';
+}
+
+.statusTab:hover {
+  background: #f7fafc;
+  color: #007BB8;
+}
+
+.statusTab.active {
+  background: #00547E;
+  color: #f9f9f9;
+}
+
+/* EMPTY STATE */
+.emptyState {
+  text-align: center;
+  padding: clamp(2rem, 5vw, 4rem) clamp(1rem, 3vw, 2rem);
+  background: #f7fafc;
+  border-radius: 12px;
+  border: 2px dashed #e2e8f0;
+}
+
+.emptyState p {
+  color: #718096;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: 1.5rem;
+}
+
+/* PATIENTS GRID */
+.patientsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(240px, 40vw, 350px), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+  width: 100%;
+}
+
+/* LOADING */
+.loading {
+  text-align: center;
+  padding: clamp(1.5rem, 3vw, 2rem);
+  color: #718096;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+}
+
+/* MOBILE ADAPTATION */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .addButton {
+    align-self: flex-end;
+  }
+
+  .statusTab {
+    flex: 1 1 calc(50% - 8px);
+  }
+}

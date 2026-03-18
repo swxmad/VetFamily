@@ -1,0 +1,250 @@
+/* PAGE LAYOUT */
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* PAGE WRAPPER */
+.addPatientPage {
+    max-width: clamp(320px, 95vw, 1320px);
+    margin: 0 auto;
+    background: var(--color-surface, #ffffff);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: clamp(0.5rem, 1vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header h1 {
+    font-family: 'Mulish';
+    color: #005a87;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+}
+
+/* BUTTONS */
+.backButton,
+.printButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    background: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+}
+
+.backButton {
+    border: 1px solid #4a5568;
+    color: #4a5568;
+}
+
+.backButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+.printButton {
+    border: 1px solid #007BB8;
+    color: #007BB8;
+}
+
+.printButton:hover:not(:disabled) {
+    background: #007BB8;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 123, 184, 0.3);
+}
+
+.printButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* FORM */
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* TWO-COLUMN SECTIONS */
+.info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.section {
+    flex: 1 1 calc(50% - 1rem);
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+    min-width: clamp(280px, 45%, 600px);
+}
+
+.reception {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+/* SECTION TITLES */
+.section h2,
+.reception h2 {
+    color: #007BB8;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* FORM GROUP */
+.formGroup {
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.formGroup label {
+    font-family: 'Open Sans';
+    color: #034B70;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+}
+
+/* INPUTS */
+.input,
+.textarea {
+    width: 100%;
+    margin-top: 0.4rem;
+    padding: clamp(0.6rem, 1.5vw, 0.75rem);
+    border: 1px solid #007BB8;
+    border-radius: 8px;
+    font-size: clamp(0.85rem, 1.5vw, 1rem);
+    font-family: 'Open Sans';
+    box-sizing: border-box;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+}
+
+.input:focus,
+.textarea:focus {
+    border-color: #04abff;
+    outline: none;
+}
+
+.textarea {
+    resize: vertical;
+    min-height: clamp(80px, 15vw, 150px);
+}
+
+/* ERRORS */
+.inputError {
+    border-color: #e53e3e;
+}
+
+.errorText {
+    color: #e53e3e;
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.submitError {
+    color: #e53e3e;
+    padding: 1rem;
+    background: #fff5f5;
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* ACTION BUTTONS */
+.formActions {
+    display: flex;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    padding-top: 1rem;
+    border-top: 2px solid #e2e8f0;
+    flex-wrap: wrap;
+}
+
+.saveButton,
+.cancelButton {
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+    border-radius: 8px;
+    font-size: clamp(1rem, 2vw, 1.1rem);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    max-width: 320px;
+}
+
+.saveButton {
+    flex: 2;
+    background: none;
+    border: 2px solid #10683f;
+    color: #10683f;
+}
+
+.saveButton:hover:not(:disabled) {
+    background: #10683f;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.saveButton:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.cancelButton {
+    flex: 1;
+    background: none;
+    border: 2px solid #4a5568;
+    color: #4a5568;
+}
+
+.cancelButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .info {
+        flex-direction: column;
+    }
+
+    .section {
+        width: 100%;
+    }
+}
+
+/* PRINT MODE */
+@media print {
+    .header,
+    .formActions,
+    .backButton,
+    .printButton {
+        display: none;
+    }
+
+    .addPatientPage {
+        box-shadow: none;
+        border: none;
+    }
+}

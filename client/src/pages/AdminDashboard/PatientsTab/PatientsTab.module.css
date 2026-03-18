@@ -1,0 +1,126 @@
+.patientsTab {
+    max-width: 100%;
+    padding: 0.5rem;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .header {
+    color: #034B70;
+    font-family: 'Mulish';
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+  }
+  
+  .patientsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(280px, 30vw, 350px), 1fr));
+    gap: clamp(1rem, 2.5vw, 1.5rem);
+    padding: 0.5rem;
+  }
+  
+  .emptyState {
+    text-align: center;
+    padding: clamp(3rem, 8vw, 5rem) clamp(1.5rem, 4vw, 2rem);
+    background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+    border-radius: 12px;
+    border: 2px dashed #cbd5e0;
+    margin-top: 2rem;
+  }
+  
+  .emptyState p {
+    color: #718096;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin: 0 0 1.5rem 0;
+    font-weight: 400;
+  }
+  
+  .emptyState svg {
+    margin-bottom: 1rem;
+    opacity: 0.5;
+  }
+  
+  .loading {
+    text-align: center;
+    padding: clamp(3rem, 8vw, 5rem) 2rem;
+    color: #718096;
+    font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .loading::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #007BB8;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  .addButton {
+    padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 3vw, 2rem);
+    background: linear-gradient(135deg, #007BB8 0%, #005a87 100%);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .addButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 184, 0.4);
+  }
+  
+  .addButton:active {
+    transform: translateY(0);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .patientsTab::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .patientsTab::-webkit-scrollbar-track {
+    background: #f7fafc;
+    border-radius: 4px;
+  }
+  
+  .patientsTab::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 4px;
+  }
+  
+  .patientsTab::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+  }
+
+  .patientsTab:focus-visible {
+    outline: 2px solid #007BB8;
+    outline-offset: 2px;
+  }

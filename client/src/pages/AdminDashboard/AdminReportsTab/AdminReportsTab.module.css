@@ -1,0 +1,150 @@
+/* REPORTS TAB */
+.reportsTab {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  width: 100%;
+  max-width: clamp(320px, 95vw, 1320px);
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  color: #034B70;
+  font-family: 'Mulish';
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.subHeader {
+  margin-top: clamp(0.5rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+}
+
+.filterGroup label {
+  font-family: 'Open Sans';
+  font-weight: 500;
+  font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+  color: #2d3748;
+}
+
+.filterGroup input,
+.filterGroup select {
+  border: 1px solid #034B70;
+  font-family: 'Open Sans';
+  color: #2d3748;
+  padding: clamp(0.3rem, 1vw, 0.5rem);
+  border-radius: 6px;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+}
+
+/* LOAD BUTTON */
+.loadButton {
+  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1rem);
+  border-radius: 6px;
+  border: 1px solid #007bb8;
+  background-color: white;
+  color: #007bb8;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1.2vw, 0.9rem);
+  transition: all 0.2s;
+}
+
+.loadButton:hover {
+  color: #f9f9f9;
+  background-color: #007bb8;
+}
+
+/* SUMMARY CARDS */
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+  margin-top: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.card {
+  min-width: clamp(120px, 25vw, 180px);
+  border-radius: 8px;
+  border: 1px solid #034B70;
+  padding: clamp(0.6rem, 1.5vw, 0.8rem) clamp(0.8rem, 2vw, 1rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.3rem, 1vw, 0.5rem);
+  background: #f9f9f9;
+}
+
+.label {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #034B70;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.value {
+  font-family: 'Open Sans';
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #2d3748;
+
+  /* FIX: long numbers/words never overflow */
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* TABLE */
+h3 {
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #034B70;
+  margin-top: clamp(0.8rem, 2vw, 1rem);
+}
+
+.table {
+  margin-top: clamp(0.5rem, 1vw, 0.75rem);
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Open Sans';
+}
+
+.table th,
+.table td {
+  border: 1px solid #d0d7de;
+  padding: clamp(0.4rem, 1vw, 0.6rem);
+  font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.table th {
+  background-color: #f3f4f6;
+  font-weight: 600;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,318 @@
+/* PROFILE TAB */
+.profileTab {
+  max-width: clamp(320px, 95vw, 1130px);
+  margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+  color: #034B70;
+  font-family: 'Mulish';
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  padding-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+/* EDIT BUTTON */
+.editButton {
+  background: none;
+  border: 1px solid #007BB8;
+  color: #007BB8;
+  font-family: 'Mulish';
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: clamp(40%, 20vw, 30%);
+  padding: clamp(0.6rem, 1.5vw, 0.875rem) clamp(1rem, 3vw, 2rem);
+  border-radius: 8px;
+}
+
+.editButton:hover {
+  background-color: #007BB8;
+  color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.passwordButton {
+  background: none;
+  border: 1px solid #d69e2e;
+  color: #975a16;
+  font-family: 'Mulish';
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: clamp(40%, 20vw, 30%);
+  padding: clamp(0.6rem, 1.5vw, 0.875rem) clamp(1rem, 3vw, 2rem);
+  border-radius: 8px;
+}
+
+.passwordButton:hover {
+  background-color: #d69e2e;
+  color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(214, 158, 46, 0.35);
+}
+
+/* MODAL */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  z-index: 9999;
+}
+
+.modal {
+  width: min(520px, 100%);
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px solid #007BB8;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  background: #f7fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modalTitle {
+  margin: 0;
+  font-family: 'Mulish';
+  color: #034B70;
+  font-weight: 700;
+}
+
+.modalClose {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #4a5568;
+}
+
+.modalForm {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.modalLabel {
+  font-family: 'Open Sans';
+  color: #034B70;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  outline: none;
+  font-family: 'Open Sans';
+}
+
+.modalInput:focus {
+  border-color: #007BB8;
+  box-shadow: 0 0 0 3px rgba(0, 123, 184, 0.18);
+}
+
+.modalError {
+  color: #e53e3e;
+  background: #fff5f5;
+  border: 1px solid #fed7d7;
+  padding: 0.75rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.modalActions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.modalSave,
+.modalCancel {
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modalSave {
+  background: #007BB8;
+  color: #fff;
+  border: 1px solid #007BB8;
+}
+
+.modalSave:hover {
+  box-shadow: 0 8px 18px rgba(0, 123, 184, 0.25);
+}
+
+.modalSave:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.modalCancel {
+  background: none;
+  border: 1px solid #4a5568;
+  color: #4a5568;
+}
+
+.modalCancel:hover {
+  background: #4a5568;
+  color: #fff;
+}
+
+/* FORM WRAPPER */
+.form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  border: clamp(0.2rem, 0.4vw, 0.35rem) solid #007BB8;
+  border-radius: 20px;
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  gap: clamp(1rem, 3vw, 2rem);
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+/* FORM COLUMNS */
+.formRow {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
+}
+
+/* FORM GROUP */
+.formGroup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: clamp(0.5rem, 1vw, 1rem);
+  width: 100%;
+}
+
+/* LABEL */
+.label {
+  font-family: 'Open Sans';
+  color: #034B70;
+  font-weight: bold;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.8rem, 1.5vw, 1rem);
+  width: 50%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+/* INPUT */
+.input {
+  font-family: 'Open Sans';
+  padding: clamp(0.5rem, 1vw, 0.75rem) clamp(0.8rem, 1.5vw, 1rem);
+  border: none;
+  color: #034B70;
+  text-align: end;
+  background-color: #f9f9f9;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  width: 50%;
+  box-sizing: border-box;
+  word-break: break-word;
+}
+
+.input.disabled {
+  color: #718096;
+  cursor: not-allowed;
+}
+
+/* ERRORS */
+.errorText {
+  color: #e53e3e;
+  font-size: clamp(0.7rem, 1vw, 0.8rem);
+}
+
+.submitError {
+  color: #e53e3e;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* ACTION BUTTONS */
+.formActions {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.saveButton,
+.cancelButton {
+  padding: clamp(0.6rem, 1.5vw, 0.875rem) clamp(1rem, 3vw, 2rem);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.saveButton {
+  background: none;
+  border: 1px solid #007BB8;
+  color: #007BB8;
+}
+
+.saveButton:hover{
+box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+background-color: #007BB8;
+color: #f9f9f9;
+}
+
+.saveButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.cancelButton {
+  background: none;
+  color: #4a5568;
+  border: 1px solid #4a5568;
+}
+
+.cancelButton:hover {
+  background: #4a5568;
+  color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .formGroup {
+    flex-direction: column;
+  }
+
+  .label,
+  .input {
+    width: 100%;
+    text-align: left;
+  }
+
+  .editButton {
+    width: 100%;
+  }
+  .passwordButton {
+    width: 100%;
+  }
+}

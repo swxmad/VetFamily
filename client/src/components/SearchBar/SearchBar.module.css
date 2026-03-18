@@ -1,0 +1,74 @@
+.searchBar {
+  margin-bottom: clamp(0.5rem, 1vw, 1rem);
+}
+
+.form {
+  display: flex;
+  gap: clamp(0.3rem, 0.7vw, 0.8rem);
+}
+
+.input {
+  flex: 1;
+  padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.6rem, 1vw, 1.2rem);
+  border-radius: 0.3rem;
+  border: 1px solid #d0d7de;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.button {
+  padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.8rem, 1.5vw, 1.6rem);
+  border-radius: 0.3rem;
+  border: 1px solid #007bb8;
+  background: none;
+  color: #007bb8;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 1vw, 1rem);
+}
+
+.button:hover{
+  background-color: #007bb8;
+  color: #f9f9f9;
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+.results {
+  margin-top: clamp(0.3rem, 0.7vw, 0.8rem);
+  border: 1px solid #007bb8;
+  border-radius: 0.3rem;
+  max-height: clamp(8rem, 20vh, 15rem);
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.resultItem {
+  width: 100%;
+  text-align: left;
+  padding: clamp(0.4rem, 0.8vw, 0.8rem) clamp(0.6rem, 1vw, 1.2rem);
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.1rem, 0.3vw, 0.3rem);
+}
+
+.resultItem:hover {
+  background-color: #f3f4f6;
+}
+
+.petName {
+  font-weight: 600;
+  font-family: 'Open Sans';
+  color: #034B70;
+  font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.owner {
+  font-size: clamp(0.6rem, 0.9vw, 0.8rem);
+  font-family: 'Open Sans';
+  color: #2d3748;
+}

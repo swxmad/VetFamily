@@ -1,0 +1,384 @@
+/* PAGE LAYOUT */
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* UNIFIED PAGE WIDTH */
+.patientDetail,
+.addPatientPage,
+.profileTab,
+.patientsTab {
+    width: 100%;
+    max-width: clamp(320px, 95vw, 1320px);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* PAGE WRAPPER */
+.patientDetail {
+    background: var(--color-surface, #ffffff);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: clamp(0.5rem, 1vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header h1 {
+    font-family: 'Mulish';
+    color: #005a87;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+    flex: 1;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* BUTTONS */
+.backButton,
+.printButton,
+.completeButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    background: none;
+}
+
+.backButton {
+    border: 1px solid #4a5568;
+    color: #4a5568;
+}
+
+.backButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+.printButton {
+    border: 1px solid #075c86;
+    color: #075c86;
+}
+
+.printButton:hover {
+    background: #075c86;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 123, 184, 0.3);
+}
+
+.completeButton {
+    border: 1px solid #10683f;
+    color: #10683f;
+}
+
+.completeButton:hover {
+    background: #10683f;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+/* ACTION BUTTONS SPACING */
+.actions {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+}
+
+/* INFORMATION BLOCKS */
+.information {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    flex-wrap: wrap;
+}
+
+.infoCard,
+.currentCare {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+    flex: 1 1 clamp(260px, 45%, 600px);
+    min-height: 160px;
+}
+
+.infoCard h2,
+.currentCare h2,
+.visitsSection h2 {
+    color: #007BB8;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* INFO GRID */
+.infoGrid,
+.careGrid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+.infoItem,
+.careItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: clamp(0.6rem, 1vw, 0.9rem);
+    background: #f9f9f9;
+    border-radius: 8px;
+    gap: 0.75rem;
+}
+
+/* LABEL + VALUE FIXES */
+.label,
+.value {
+    flex: 1;
+}
+
+/* FIX: long words wrap correctly */
+.value {
+    font-family: 'Open Sans';
+    color: #2d3748;
+    font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+    text-align: right;
+    line-height: 1.4;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* STATUS BADGES */
+.status {
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    font-weight: 600;
+}
+
+.status.active {
+    background: #c6f6d5;
+    color: #22543d;
+}
+
+.status.completed {
+    background: #fed7d7;
+    color: #822727;
+}
+
+/* VISITS SECTION */
+.visitsSection {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+.visitsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.addVisitButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border: 1px solid #075c86;
+    border-radius: 8px;
+    color: #075c86;
+    background: none;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.addVisitButton:hover {
+    background: #075c86;
+    color: #f9f9f9;
+}
+
+/* ADD VISIT FORM */
+.addVisitForm {
+    margin-bottom: 2rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+.addVisitForm h3 {
+    color: #2d3748;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 1rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    display: block;
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: clamp(0.6rem, 1.5vw, 0.75rem);
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #007BB8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 184, 0.2);
+}
+
+.saveVisitButton {
+    width: 100%;
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+    border: 2px solid #10683f;
+    border-radius: 8px;
+    color: #10683f;
+    background: none;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.saveVisitButton:hover {
+    background: #10683f;
+    color: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+/* VISITS LIST */
+.visitsList {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 2vw, 1rem);
+}
+
+.visitCard {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: white;
+    border-radius: 12px;
+    border-left: 4px solid #007BB8;
+}
+
+.visitHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(0.6rem, 1vw, 1rem);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.visitHeader h3 {
+    color: #2d3748;
+    margin: 0;
+}
+
+.visitDate {
+    color: #718096;
+    font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+}
+
+.visitItem {
+    margin-bottom: 0.75rem;
+}
+
+.visitLabel {
+    font-family: 'Open Sans';
+    display: block;
+    color: #718096;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    margin-bottom: 0.25rem;
+}
+
+.visitText {
+    color: #2d3748;
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    margin: 0;
+    word-break: break-word;
+}
+
+/* EMPTY STATES */
+.noVisits {
+    text-align: center;
+    color: #718096;
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.loading {
+    color: #718096;
+}
+
+.error {
+    color: #e53e3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PRINT MODE */
+@media print {
+    .header,
+    .actions,
+    .addVisitButton,
+    .backButton {
+        display: none;
+    }
+
+    .patientDetail {
+        box-shadow: none;
+        border: none;
+    }
+}

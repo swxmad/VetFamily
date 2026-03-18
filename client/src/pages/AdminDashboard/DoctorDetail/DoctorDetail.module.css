@@ -1,0 +1,348 @@
+/* PAGE LAYOUT */
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* UNIFIED WIDTH */
+.doctorDetail {
+    width: 100%;
+    max-width: clamp(320px, 95vw, 1320px);
+    margin: 0 auto;
+    background: white;
+    border-radius: 16px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: clamp(0.5rem, 1vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header h1 {
+    font-family: 'Mulish';
+    color: #005a87;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+}
+
+/* BUTTONS */
+.backButton,
+.editButton,
+.deleteButton,
+.resetPasswordButton,
+.saveButton,
+.cancelButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    background: none;
+}
+
+/* BACK BUTTON */
+.backButton {
+    border: 1px solid #4a5568;
+    color: #4a5568;
+}
+.backButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+/* EDIT BUTTON */
+.editButton {
+    border: 1px solid #005a87;
+    color: #005a87;
+}
+.editButton:hover {
+    background-color: #005a87;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 123, 184, 0.4);
+}
+
+/* DELETE + RESET */
+.deleteButton,
+.resetPasswordButton {
+    border: 1px solid #9b1818;
+    color: #9b1818;
+}
+.deleteButton:hover,
+.resetPasswordButton:hover {
+    background-color: #9b1818;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+}
+
+/* SAVE */
+.saveButton {
+    border: 1px solid #197248;
+    color: #197248;
+}
+.saveButton:hover {
+    background-color: #197248;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.4);
+}
+
+/* CANCEL */
+.cancelButton {
+    border: 1px solid #4a5568;
+    color: #4a5568;
+}
+.cancelButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+/* HEADER ACTIONS */
+.headerActions {
+    display: flex;
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+    flex-wrap: wrap;
+}
+
+/* INFO SECTION */
+.infoSection {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-bottom: 2rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+    flex-wrap: wrap;
+}
+
+/* INFO GRID */
+.infoGrid {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: clamp(240px, 40%, 500px);
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+}
+
+/* INFO ROW */
+.infoRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(0.5rem, 1.5vw, 1rem);
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+/* LABEL */
+.infoLabel {
+    font-family: 'Open Sans';
+    color: #034B70;
+    font-weight: 600;
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    padding: 0.2rem 0;
+    flex: 1;
+    min-width: 120px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* VALUE */
+.infoValue {
+    font-family: 'Open Sans';
+    padding: 0.5rem 0;
+    color: #034B70;
+    text-align: right;
+    background-color: #f9f9f9;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    flex: 1;
+    min-width: 120px;
+
+    /* FIX: long words never overflow */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* INPUT */
+.infoInput {
+    font-family: 'Open Sans';
+    padding: clamp(0.4rem, 1vw, 0.6rem);
+    border: 2px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    flex: 1;
+    max-width: 260px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.infoInput:focus {
+    border-color: #007BB8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 184, 0.15);
+}
+
+/* CHECKBOX */
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a5568;
+    font-weight: 500;
+    cursor: pointer;
+}
+.checkboxLabel input {
+    width: 18px;
+    height: 18px;
+    accent-color: #007BB8;
+}
+
+/* STATUS BADGE */
+.statusBadge {
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 600;
+}
+.statusBadge.active {
+    color: #197248;
+}
+.statusBadge.inactive {
+    color: #a12929;
+}
+
+/* ERRORS */
+.inputError {
+    border-color: #e53e3e !important;
+}
+.errorText {
+    color: #e53e3e;
+    font-size: clamp(0.75rem, 1.2vw, 0.85rem);
+    display: block;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+.submitError {
+    color: #e53e3e;
+    padding: 1rem;
+    background: #fff5f5;
+    border: 1px solid #fed7d7;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* PATIENTS SECTION */
+.patientsSection {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+.patientsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.patientsHeader h2 {
+    color: #007BB8;
+    font-family: 'Mulish';
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin: 0;
+}
+
+/* PATIENTS TABS */
+.patientsTabs {
+    display: flex;
+    gap: clamp(0.3rem, 1vw, 0.5rem);
+    flex-wrap: wrap;
+}
+
+.patientsTab {
+    padding: clamp(0.4rem, 1vw, 0.6rem) clamp(0.8rem, 2vw, 1rem);
+    background: white;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    color: #718096;
+    font-family: 'Open Sans';
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.patientsTab:hover {
+    border-color: #007BB8;
+    color: #007BB8;
+}
+
+.patientsTab.active {
+    background: #ebf8ff;
+    border-color: #007BB8;
+    color: #007BB8;
+}
+
+/* EMPTY PATIENTS */
+.emptyPatients {
+    text-align: center;
+    padding: clamp(2rem, 4vw, 3rem);
+    color: #718096;
+    background: white;
+    border-radius: 8px;
+    border: 2px dashed #cbd5e0;
+}
+
+/* PATIENTS GRID */
+.patientsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(clamp(260px, 30vw, 350px), 1fr));
+    gap: clamp(0.8rem, 2vw, 1rem);
+}
+
+/* LOADER + ERROR */
+.loader,
+.error {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.loader {
+    color: #718096;
+}
+.error {
+    color: #e53e3e;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

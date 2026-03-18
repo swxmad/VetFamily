@@ -1,0 +1,413 @@
+/* PAGE LAYOUT */
+.detailContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+    padding: clamp(1rem, 3vw, 2rem);
+}
+
+/* UNIFIED WIDTH */
+.patientDetail {
+    width: 100%;
+    max-width: clamp(320px, 95vw, 1320px);
+    margin: 0 auto;
+    background: var(--color-surface, #ffffff);
+    border-radius: 12px;
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(1.5rem, 3vw, 2rem);
+    padding-bottom: clamp(0.5rem, 1vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.header h1 {
+    font-family: 'Mulish';
+    color: #005a87;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin: 0;
+}
+
+/* BUTTONS */
+.backButton,
+.printButton,
+.completeButton,
+.restoreButton,
+.deleteButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    background: none;
+}
+
+/* BACK */
+.backButton {
+    border: 1px solid #4a5568;
+    color: #4a5568;
+}
+.backButton:hover {
+    background: #4a5568;
+    color: #f9f9f9;
+}
+
+.deleteButton {
+    border: 1px solid #9b1818;
+    color: #9b1818;
+}
+.deleteButton:hover {
+    background-color: #9b1818;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(245, 101, 101, 0.4);
+}
+
+/* PRINT */
+.printButton {
+    border: 1px solid #075c86;
+    color: #075c86;
+}
+.printButton:hover {
+    background: #075c86;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(0, 123, 184, 0.3);
+}
+
+/* COMPLETE */
+.completeButton {
+    border: 1px solid #10683f;
+    color: #10683f;
+}
+.completeButton:hover {
+    background: #10683f;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+.restoreButton {
+  border: 1px solid #d69e2e;
+  color: #975a16;
+}
+.restoreButton:hover {
+  background: #d69e2e;
+  color: #f9f9f9;
+  box-shadow: 0 4px 12px rgba(214, 158, 46, 0.3);
+}
+
+/* ACTIONS */
+.actions {
+    display: flex;
+    gap: clamp(1rem, 2vw, 2rem);
+    flex-wrap: wrap;
+}
+
+/* INFORMATION BLOCKS */
+.information {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(1rem, 2vw, 1.5rem);
+    flex-wrap: wrap;
+}
+
+.infoCard,
+.currentCare {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+    flex: 1 1 clamp(260px, 45%, 600px);
+    min-height: 160px;
+    margin-bottom: 2rem;
+}
+
+.infoCard h2,
+.currentCare h2,
+.visitsSection h2 {
+    color: #007BB8;
+    font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+/* INFO GRID */
+.infoGrid {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.5rem, 1vw, 0.75rem);
+}
+
+/* INFO ITEM */
+.infoItem,
+.careItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: clamp(0.6rem, 1vw, 0.9rem);
+    background: #f9f9f9;
+    border-radius: 8px;
+    gap: 0.75rem;
+}
+
+/* LABEL */
+.label {
+    font-family: 'Open Sans';
+    color: #034B70;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.4vw, 1rem);
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    flex: 1;
+}
+
+/* VALUE */
+.value {
+    font-family: 'Open Sans';
+    color: #2d3748;
+    font-weight: 400;
+    font-size: clamp(0.8rem, 1.3vw, 0.95rem);
+    text-align: right;
+    line-height: 1.4;
+    flex: 1;
+
+    /* FIX: long words never overflow */
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* VISITS SECTION */
+.visitsSection {
+    margin-bottom: 2rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: #f9f9f9;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+.visitsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.addVisitButton {
+    padding: clamp(0.6rem, 1.5vw, 0.75rem) clamp(1rem, 3vw, 1.5rem);
+    background: none;
+    border: 1px solid #007BB8;
+    border-radius: 8px;
+    color: #007BB8;
+    background: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.addVisitButton:hover {
+    background: #007BB8;
+    color: #f9f9f9;
+}
+
+/* ADD VISIT FORM */
+.addVisitForm {
+    margin-bottom: 2rem;
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: white;
+    border-radius: 12px;
+    border: 2px solid #007BB8;
+}
+
+.addVisitForm h3 {
+    color: #2d3748;
+    margin-bottom: clamp(0.8rem, 1.5vw, 1rem);
+}
+
+.formRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0.8rem, 2vw, 1rem);
+    margin-bottom: 1rem;
+}
+
+.formGroup {
+    margin-bottom: 1rem;
+}
+
+.formGroup label {
+    display: block;
+    color: #4a5568;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: clamp(0.6rem, 1.5vw, 0.75rem);
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    font-family: inherit;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    border-color: #007BB8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 184, 0.2);
+}
+
+.saveVisitButton {
+    width: 100%;
+    padding: clamp(0.8rem, 1.5vw, 1rem);
+    border: 1px solid #197248;
+    color: #197248;
+    border-radius: 8px;
+    background: none;
+    font-size: clamp(0.9rem, 1.5vw, 1rem);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.saveVisitButton:hover {
+    background: #197248;
+    color: #f9f9f9;
+    box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+/* VISITS LIST */
+.visitsList {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(0.8rem, 2vw, 1rem);
+}
+
+.visitCard {
+    padding: clamp(1rem, 2vw, 1.5rem);
+    background: white;
+    border-radius: 12px;
+    border-left: 4px solid #007BB8;
+}
+
+.visitHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: clamp(0.6rem, 1vw, 1rem);
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.visitHeader h3 {
+    color: #2d3748;
+    margin: 0;
+}
+
+.visitDate {
+    color: #718096;
+    font-size: clamp(0.8rem, 1.4vw, 0.9rem);
+}
+
+.visitItem {
+    margin-bottom: 0.75rem;
+}
+
+.visitLabel {
+    font-family: 'Open Sans';
+    display: block;
+    color: #718096;
+    font-weight: 500;
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    margin-bottom: 0.25rem;
+}
+
+.visitText {
+    color: #2d3748;
+    font-size: clamp(0.85rem, 1.4vw, 0.95rem);
+    margin: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+/* EMPTY STATES */
+.noVisits {
+    text-align: center;
+    color: #718096;
+    padding: clamp(1.5rem, 3vw, 2rem);
+}
+
+.loading,
+.error {
+    text-align: center;
+    padding: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+.loading {
+    color: #718096;
+}
+
+.error {
+    color: #e53e3e;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .formRow {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* PRINT MODE */
+@media print {
+    .header,
+    .actions,
+    .addVisitButton,
+    .backButton,
+    .expandBtn,
+    .addVisitForm,
+    .saveVisitButton {
+        display: none !important;
+    }
+
+    .patientDetail {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .infoCard,
+    .currentCare,
+    .visitsSection {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+
+    .visitCard {
+        border: 1px solid #000;
+        page-break-inside: avoid;
+    }
+}
+
+/* ACCESSIBILITY */
+.backButton:focus-visible,
+.printButton:focus-visible,
+.completeButton:focus-visible,
+.addVisitButton:focus-visible,
+.saveVisitButton:focus-visible,
+.expandBtn:focus-visible,
+.formGroup input:focus-visible,
+.formGroup textarea:focus-visible {
+    outline: 2px solid #007BB8;
+    outline-offset: 2px;
+}
