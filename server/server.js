@@ -4,7 +4,6 @@ const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const dotenv = require('dotenv');
 const { connectDB } = require('./config/database');
-const cors = require("cors");
 
 const authRoutes = require('./routes/authRoutes');
 const adminRoutes = require('./routes/adminRoutes');
